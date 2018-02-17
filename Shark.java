@@ -1,17 +1,16 @@
-package task1;
-
 public class Shark {
 
     private String sharkCommonName;
     private String latinName;
     private int maximumLength;
     private int maximumDepth;
-    private String maximumNumberOfYoung;
+    private int maximumNumberOfYoung;
     private int globalPresence;
-    private String listOfOceanicRegions;
-
-//Constructor
-    public Shark(String sharkCommonName, String latinName, int maximumLength, int maximumDepth, String maximumNumberOfYoung, int globalPresence, String listOfOceanicRegions) {
+    private String listOfOceanicRegions[];
+    
+    
+    //Constructor
+    public Shark(String sharkCommonName, String latinName, int maximumLength, int maximumDepth, int maximumNumberOfYoung, int globalPresence, String[] listOfOceanicRegions) {
         this.sharkCommonName = sharkCommonName;
         this.latinName = latinName;
         this.maximumLength = maximumLength;
@@ -19,46 +18,53 @@ public class Shark {
         this.maximumNumberOfYoung = maximumNumberOfYoung;
         this.globalPresence = globalPresence;
         this.listOfOceanicRegions = listOfOceanicRegions;
+    }
 
+    public Shark() {
     }
 
     public String getSharkCommonName() {
         return sharkCommonName;
     }
 
-    public void setSharkCommonName(String sharkCommonName) {
+
+    public void setSharkCommonName(String name) {
         this.sharkCommonName = sharkCommonName;
     }
+
 
     public String getLatinName() {
         return latinName;
     }
-//
+
     public void setLatinName(String latinName) {
         this.latinName = latinName;
     }
+
 
     public int getMaximumLength() {
         return maximumLength;
     }
 
-    public void setMaximumLength(int maximumLength) {
-        this.maximumLength = maximumLength;
+    public void setMaximumlength(int maximumlength) {
+        this.maximumLength = maximumlength;
     }
+
 
     public int getMaximumDepth() {
         return maximumDepth;
     }
 
-    public void setMaximumDepth(int maximumDepth) {
+    public void setMaxDepth(int maximumDepth) {
         this.maximumDepth = maximumDepth;
     }
 
-    public String getMaximumNumberOfYoung() {
+  
+    public int getMaximumNumberOfYoung() {
         return maximumNumberOfYoung;
     }
 
-    public void setMaximumNumberOfYoung(String maximumNumberOfYoung) {
+    public void setMaxNumberLifetime(int maximumNumberOfYoung) {
         this.maximumNumberOfYoung = maximumNumberOfYoung;
     }
 
@@ -70,16 +76,17 @@ public class Shark {
         this.globalPresence = globalPresence;
     }
 
-    public String getListOfOceanicRegions() {
+    public String[] getListOfOceanicRegions() {
         return listOfOceanicRegions;
     }
 
-    public void setListOfOceanicRegions(String listOfOceanicRegions) {
+    public void setListOfOceanicRegions(String[] listOfOceanicRegions) {
         this.listOfOceanicRegions = listOfOceanicRegions;
     }
-    
-    public String toString(){
-        return getSharkCommonName() + " " + getMaximumLength() + " cm.";
+
+    @Override
+    public String toString() {
+        return sharkCommonName + " " + getMaximumLength() + " cm.";
     }
     
     public int compareTo(Shark compareShark) {
@@ -91,6 +98,7 @@ public class Shark {
         //descending order
         //return compareQuantity - this.quantity;
 
-    }
 
+}
+    
 }
